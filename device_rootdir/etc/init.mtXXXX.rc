@@ -1,0 +1,3 @@
+chown system system /sys/led_controller/red_blinks
+chown system system /sys/led_controller/green_blinks
+chown system system /sys/led_controller/led_alert

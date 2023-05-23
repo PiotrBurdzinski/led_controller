@@ -1,0 +1,4 @@
+# For Ledcontroller
+allow system_server sysfs_ledcontroller:file rw_file_perms;
+
+add_service(system_server, ledcontroller_service)

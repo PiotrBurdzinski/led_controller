@@ -1,0 +1,3 @@
+genfscon sysfs /led_controller/red_blinks u:object_r:sysfs_ledcontroller:s0
+genfscon sysfs /led_controller/green_blinks u:object_r:sysfs_ledcontroller:s0
+genfscon sysfs /led_controller/led_laert u:object_r:sysfs_ledcontroller:s0
