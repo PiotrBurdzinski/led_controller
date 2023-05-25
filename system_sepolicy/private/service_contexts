@@ -79,6 +79,7 @@ adservices_manager                        u:object_r:adservices_manager_service:
 aidl_lazy_test_1                          u:object_r:aidl_lazy_test_service:s0
 aidl_lazy_test_2                          u:object_r:aidl_lazy_test_service:s0
 aidl_lazy_cb_test                         u:object_r:aidl_lazy_test_service:s0
+ledcontroller                             u:object_r:ledcontroller_service:s0
 alarm                                     u:object_r:alarm_service:s0
 android.hardware.automotive.evs.IEvsEnumerator/default u:object_r:evsmanagerd_service:s0
 android.os.UpdateEngineService            u:object_r:update_engine_service:s0

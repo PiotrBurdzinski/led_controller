@@ -6071,6 +6071,16 @@ public abstract class Context {
     public static final String LINEARMOTOR_VIBRATOR_SERVICE = "linearmotor";
 
     /**
+     * Use with {@link #getSystemService} to retrieve a
+     * {@link com.oplus.os.LedController} for accessing led blinking
+     *
+     * @hide
+     * @see #getSystemService
+     * @see com.android.internal.os.LedController
+     */
+    public static final String LED_CONTROLLER_SERVICE = "ledcontroller";
+
+    /**
      * Determine whether the given permission is allowed for a particular
      * process and user ID running in the system.
      *

@@ -34,6 +34,8 @@ type sdk_sandbox_data_file, file_type, data_file_type, core_data_file_type, app_
 # /sys/kernel/debug/kcov for coverage guided kernel fuzzing in userdebug builds.
 type debugfs_kcov, fs_type, debugfs_type;
 
+type sysfs_ledcontroller, sysfs_type, fs_type;
+
 # App executable files in /data/data directories
 type app_exec_data_file, file_type, data_file_type, core_data_file_type;
 typealias app_exec_data_file alias rs_data_file;

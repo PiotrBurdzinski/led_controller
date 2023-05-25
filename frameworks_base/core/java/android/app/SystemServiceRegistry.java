@@ -249,6 +249,9 @@ import com.android.internal.util.Preconditions;
 import com.oplus.os.ILinearmotorVibratorService;
 import com.oplus.os.LinearmotorVibrator;
 
+import com.android.internal.os.ILedControllerService;
+import com.android.internal.os.LedController;
+
 import java.util.Map;
 import java.util.Objects;
 
@@ -962,6 +965,15 @@ public final class SystemServiceRegistry {
                 ITvInteractiveAppManager service =
                         ITvInteractiveAppManager.Stub.asInterface(iBinder);
                 return new TvInteractiveAppManager(service, ctx.getUserId());
+            }});
+
+        registerService(Context.LED_CONTROLLER_SERVICE, LedController.class,
+                new CachedServiceFetcher<LedController>() {
+            @Override
+            public LedController createService(ContextImpl ctx) {
+                IBinder binder = ServiceManager.getService(Context.LED_CONTROLLER_SERVICE);
+                ILedControllerService service = ILedControllerService.Stub.asInterface(binder);
+                return new LedController(ctx.getOuterContext(), service);
             }});
 
         registerService(Context.LINEARMOTOR_VIBRATOR_SERVICE, LinearmotorVibrator.class,

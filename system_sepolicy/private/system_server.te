@@ -67,6 +67,10 @@ allow system_server sysfs_fs_incfs_metrics:file r_file_perms;
 allow system_server sysfs_fs_f2fs:dir r_dir_perms;
 allow system_server sysfs_fs_f2fs:file r_file_perms;
 
+# For Ledcontroller
+allow system_server sysfs_ledcontroller:file rw_file_perms;
+allow system_server sysfs_leds:file rw_file_perms;
+
 # For SdkSandboxManagerService
 allow system_server sdk_sandbox_system_data_file:dir create_dir_perms;
 
@@ -930,6 +934,7 @@ userdebug_or_eng(`
 ')
 
 add_service(system_server, batteryproperties_service)
+add_service(system_server, ledcontroller_service)
 
 allow system_server keystore:keystore_key {
 	get_state

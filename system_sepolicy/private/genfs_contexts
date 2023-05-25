@@ -152,6 +152,13 @@ genfscon sysfs /fs/f2fs                           u:object_r:sysfs_fs_f2fs:s0
 genfscon sysfs /fs/fuse/bpf_prog_type_fuse        u:object_r:sysfs_fs_fuse_bpf:s0
 genfscon sysfs /fs/incremental-fs/features        u:object_r:sysfs_fs_incfs_features:s0
 genfscon sysfs /fs/incremental-fs/instances       u:object_r:sysfs_fs_incfs_metrics:s0
+genfscon sysfs /led_controller/red_blinks u:object_r:sysfs_ledcontroller:s0
+genfscon sysfs /led_controller/green_blinks u:object_r:sysfs_ledcontroller:s0
+genfscon sysfs /led_controller/led_alert u:object_r:sysfs_ledcontroller:s0
+genfscon sysfs /class/leds/red/brightness u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_rgbled.4.auto/leds/red/brightness u:object_r:sysfs_leds:s0
+genfscon sysfs /class/leds/green/brightness u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/11016000.i2c5/i2c-5/5-0034/mt6360_pmu_rgbled.4.auto/leds/green/brightness u:object_r:sysfs_leds:s0
 genfscon sysfs /power/autosleep u:object_r:sysfs_power:s0
 genfscon sysfs /power/state u:object_r:sysfs_power:s0
 genfscon sysfs /power/suspend_stats u:object_r:sysfs_suspend_stats:s0
